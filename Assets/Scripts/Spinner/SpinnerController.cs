@@ -27,6 +27,8 @@ public class SpinnerController : NetworkBehaviour {
 	public float currentSpeed = 0f;
 	[HideInInspector]
 	public Vector3 currentDirection;
+	[HideInInspector]
+	public Vector3 velocityBeforeFixedUpdate;
 
 	private Vector3 newDirection;
 	private Vector3 currentRotationOffset;
@@ -166,6 +168,11 @@ public class SpinnerController : NetworkBehaviour {
 		// Create player hook for UI updates
 		var rotationSpeedObj = GameObject.Find("UI_RotationSpeed");
 		rotationSpeedObj.GetComponent<UI_UpdateRotationSpeed> ().spinnerController = this;
+	}
+
+	// Used to update the velocity before physics takes place
+	void FixedUpdate(){
+		velocityBeforeFixedUpdate = rigidBody.velocity;
 	}
 
 }

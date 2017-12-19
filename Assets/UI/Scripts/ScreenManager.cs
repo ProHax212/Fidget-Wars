@@ -23,7 +23,7 @@ public class ScreenManager : MonoBehaviour {
 	const string k_OpenTransitionName = "Open";
 	const string k_ClosedStateName = "Closed";
 
-	public void OnEnable()
+	public void Start()
 	{
 		//We cache the Hash to the "Open" Parameter, so we can feed to Animator.SetBool.
 		m_OpenParameterId = Animator.StringToHash (k_OpenTransitionName);

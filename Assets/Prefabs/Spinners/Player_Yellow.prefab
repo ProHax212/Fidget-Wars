@@ -369,7 +369,7 @@ MonoBehaviour:
   initialRotationSpeed: 100
   maxSpeed: 20
   acceleration: 40
-  naturalRotationDecceleration: 1
+  naturalRotationDecceleration: 0.5
   handling: 20
   spinnerMass: 1
   spinner: {fileID: 1522976003615306}

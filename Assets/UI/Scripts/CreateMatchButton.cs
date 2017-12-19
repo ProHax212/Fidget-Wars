@@ -29,7 +29,7 @@ public class CreateMatchButton : MonoBehaviour {
 	// Callback when the match has been created
 	public void OnMatchCreate(bool success, string extendedInfo, MatchInfo matchInfo){
 		if (!success) {
-			Debug.Log ("Failed to create match");
+			Debug.Log ("Failed to create match: " + extendedInfo);
 			return;
 		}
 
