@@ -29,7 +29,6 @@ public class FidgetNetworkManager : NetworkManager {
 	}
 
 	void Awake(){
-		
 		DontDestroyOnLoad (gameObject);
 		Instance = this;
 	}
